@@ -14,10 +14,12 @@
 #   fi
 # then this file will run
 
-# Originally I named this file ".bashrc_zhi", but Sublime Text couldn't recognize the file extension as bash scripting language
+# originally I named this file ".bashrc_zhi", but Sublime Text couldn't recognize the file extension as bash scripting language.
+# from my test, Sublime knows .sh and .bashrc
 
 # custom aliases:
 	alias .='ls --color --group-directories-first --file-type -hlX'
+  alias s="/mnt/d/Dropbox/Portables/Sublime\ Text\ 3/subl.exe"
 
 # goto my preferred dir:
   cd /mnt/d/Dropbox/Coding/Repos
