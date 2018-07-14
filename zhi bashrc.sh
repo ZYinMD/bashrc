@@ -26,14 +26,15 @@ parse_git_branch() { # get the branch name
  git branch 2> /dev/null | sed -e '/^[^*]/d ' -e 's/* \(.*\)/(\1) /'
 }
 
-  color31="\033[31m"
-  color32="\033[32m"
-  color33="\033[33m"
-  color34="\033[34m"
-  color35="\033[35m"
-  color36="\033[36m"
-  nocolor="\033[0m"
-  PS1="${debian_chroot:+($debian_chroot)}$color32\u $color35\H $color33\w$color36 \$(parse_git_branch)$nocolor--> "
+color31="\033[31m"
+color32="\033[32m"
+color33="\033[33m"
+color34="\033[34m"
+color35="\033[35m"
+color36="\033[36m"
+color37="\033[37m"
+nocolor="\033[0m"
+PS1="${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w$color36 \$(parse_git_branch)$nocolor--> "
 
 
 # custom aliases:
