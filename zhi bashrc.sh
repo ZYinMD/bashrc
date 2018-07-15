@@ -1,7 +1,7 @@
 # this is my personal settings file for WSL Ubunto Bash.
 
 # for this to take effect, create a symlink inside ~ pointing to the Coding folder in Dropbox:
-#   ln -s /mnt/d/Dropbox/Coding Projects
+#   ln -s /mnt/d/Dropbox/Coding projects
 # note: the symlink can't be created using Windows API, or Windows GUI, it has to be done in Linux.
 
 # on bash start, it will first run ~/.profile, which only has the following lines:
@@ -13,8 +13,8 @@
 # then .bashrc will run, which contains some Ubunto's pre-set settings when WSL Ubunto was installed.
 # put the following into the end of ~/.bashrc:
 #   # Zhi's custom settings
-#   if [ -f ~/Projects/bashrc/zhi\ bashrc.sh ]; then
-#       . ~/Projects/bashrc/zhi\ bashrc.sh
+#   if [ -f ~/projects/bashrc/zhi\ bashrc.sh ]; then
+#       . ~/projects/bashrc/zhi\ bashrc.sh
 #   fi
 # then this file will run
 
@@ -26,15 +26,15 @@ parse_git_branch() { # get the branch name
  git branch 2> /dev/null | sed -e '/^[^*]/d ' -e 's/* \(.*\)/(\1) /'
 }
 
-color31="\033[31m"
-color32="\033[32m"
-color33="\033[33m"
-color34="\033[34m"
-color35="\033[35m"
-color36="\033[36m"
-color37="\033[37m"
-nocolor="\033[0m"
-PS1="${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w$color36 \$(parse_git_branch)$nocolor--> "
+color31="\[\033[31m\]"
+color32="\[\033[32m\]"
+color33="\[\033[33m\]"
+color34="\[\033[34m\]"
+color35="\[\033[35m\]"
+color36="\[\033[36m\]"
+color37="\[\033[37m\]"
+nocolor="\[\033[0m\]"
+PS1="${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w $color36\$(parse_git_branch)$nocolor--> "
 
 
 # custom aliases:
@@ -43,7 +43,7 @@ PS1="${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w$color36 
 
 # goto my preferred dir:
   # cd /mnt/d/Dropbox/Coding/Repos # this works too, but looks too long
-  cd ~/Projects
+  cd ~/projects
 
 # below are something I learned from Lynda course "Unix for Mac OS X Users"
 export HISTSIZE=10000   # increase maximum history size
