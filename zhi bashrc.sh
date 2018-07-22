@@ -34,12 +34,14 @@ color35="\[\033[35m\]"
 color36="\[\033[36m\]"
 color37="\[\033[37m\]"
 nocolor="\[\033[0m\]"
-PS1="${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w $color36\$(parse_git_branch)$nocolor--> "
+PS1="\n${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w $color36\$(parse_git_branch)$nocolor--> "
 
 
 # custom aliases:
-  alias .='ls --color --group-directories-first --file-type -hlX'
+  alias dir='ls --color --group-directories-first --file-type -hlX'
   alias s="/mnt/d/Dropbox/Portables/Sublime\ Text\ 3/subl.exe"
+  # youtube-dl aliases:
+  . ~/projects/youtube-dl-configs/说明.sh
 
 # goto my preferred dir:
   # cd /mnt/d/Dropbox/Coding/Repos # this works too, but looks too long
