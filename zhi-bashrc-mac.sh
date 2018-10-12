@@ -2,8 +2,8 @@
 
 # for this to take effect, put the following into the end of ~/.bashrc:
 #   # Zhi's custom settings
-#   if [ -f ~/Dropbox/bashrc/zhi-bashrc-mac.sh ]; then
-#       . ~/Dropbox/bashrc/zhi-bashrc-mac.sh
+#   if [ -f ~/Dropbox/Coding/bashrc/zhi-bashrc-mac.sh ]; then
+#       . ~/Dropbox/Coding/bashrc/zhi-bashrc-mac.sh
 #   fi
 # on Terminal start, ~/.bash_profile will run first, then this file gets run
 
@@ -23,10 +23,10 @@ nocolor="\[\033[0m\]"
 PS1="\n$color34\u $color35\H $color33\w $color36\$(parse_git_branch)$nocolor--> "
 
 # custom aliases:
-  alias dir='ls -G'
+  alias dir='ls -GFSlhor'
 
 # goto my preferred dir:
-  cd ~/Dropbox/Coding
+  cd ~/projects
 
 # below are something I learned from Lynda course "Unix for Mac OS X Users"
 export HISTSIZE=10000   # increase maximum history size
