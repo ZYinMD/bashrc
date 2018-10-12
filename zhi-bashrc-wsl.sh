@@ -1,4 +1,4 @@
-# this is my personal settings file for WSL Ubunto Bash.
+# this is my personal settings file for WSL Ubuntu Bash.
 
 # for this to take effect, create a symlink inside ~ pointing to the Coding folder in Dropbox:
 #   ln -s /mnt/d/Dropbox/Coding projects
@@ -10,19 +10,18 @@
 #       . ~/.bashrc
 #     fi
 #   fi
-# then .bashrc will run, which contains some Ubunto's pre-set settings when WSL Ubunto was installed.
+# then .bashrc will run, which contains some Ubuntu's pre-set settings when WSL Ubuntu was installed.
 # put the following into the end of ~/.bashrc:
 #   # Zhi's custom settings
-#   if [ -f ~/projects/bashrc/zhi\ bashrc.sh ]; then
-#       . ~/projects/bashrc/zhi\ bashrc.sh
+#   if [ -f ~/projects/bashrc/zhi-bashrc-wsl.sh ]; then
+#       . ~/projects/bashrc/zhi-bashrc-wsl.sh
 #   fi
 # then this file will run
 
-# originally I named this file ".bashrc_zhi", but Sublime Text couldn't recognize the file extension as bash scripting language.
-# from my test, Sublime knows .sh and .bashrc
+# originally I named this file ".bashrc_zhi", but Sublime Text couldn't recognize the file extension as bash scripting language, but it does know .sh and .bashrc
 
 # custom command prompt:
-parse_git_branch() { # get the branch name
+parse_git_branch() { # get git branch name
  git branch 2> /dev/null | sed -e '/^[^*]/d ' -e 's/* \(.*\)/(\1) /'
 }
 
@@ -56,5 +55,3 @@ export HISTCONTROL=ignoreboth
   # this should be the same as HISTCONTROL=ignoredups:ignorespace
   # ignoredups means if you used a command multiple times in a row, only log once
   # ignorespace means if you add a space before you command, it won't be logged. Useful when inputing sensitive stuff like passwords
-
-
