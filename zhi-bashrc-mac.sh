@@ -32,7 +32,7 @@ PS1="\n$color34\u $color35\H $color33\w $color36\$(parse_git_branch)$nocolor--> 
 export HISTSIZE=10000   # increase maximum history size
 export HISTFILESIZE=1000000 # increase maximum history file size
 export HISTTIMEFORMAT='%Y-%m-%d %a %H:%M '  # add date and time to history, this is called strftime format
-export HISTIGNORE="history:history *:pwd:df:ls:ls -la:ll:." # these commands won't be logged
+export HISTIGNORE="history:history *:pwd:df:ls:ls -la:ll:dir" # these commands won't be logged
 export HISTCONTROL=ignoreboth
   # this should be the same as HISTCONTROL=ignoredups:ignorespace
   # ignoredups means if you used a command multiple times in a row, only log once
