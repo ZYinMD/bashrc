@@ -17,8 +17,8 @@
 #       . ~/projects/bashrc/zhi-bashrc-wsl.sh
 #   fi
 # then this file will run
+# Note: Do NOT edit ~.bashrc or any other Linux files (files that are not in /mnt) with windows apps (code editors). Use Vim to edit!
 
-# originally I named this file ".bashrc_zhi", but Sublime Text couldn't recognize the file extension as bash scripting language, but it does know .sh and .bashrc
 
 # custom command prompt:
 parse_git_branch() { # get git branch name
