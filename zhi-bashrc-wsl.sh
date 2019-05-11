@@ -1,7 +1,7 @@
 # this is my personal settings file for WSL Ubuntu Bash.
 
 # for this to take effect, create a symlink inside ~ pointing to the Coding folder in Dropbox:
-#   ln -s /mnt/c/Dropbox/Coding projects
+#   ln -s /mnt/c/Dropbox/Coding ~/projects
 #   note: the symlink can't be created using Windows API, or Windows GUI, it has to be done in Linux.
 
 # on bash start, it will first run ~/.profile, which only has the following lines:
