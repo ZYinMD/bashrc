@@ -38,6 +38,16 @@ PS1="\n${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w $color
 
 # custom aliases:
   alias dir='ls --color --group-directories-first --file-type -hlX'
+  alias gsta='git status'
+  alias gadd='git add -A'
+  alias gcom='git commit -m'
+  alias gche='git checkout'
+  alias glog='git log --oneline --decorate'
+  alias graph='git log --all --decorate --oneline --graph'
+  alias gdiff='git diff'
+  alias gconf='git diff --name-only --diff-filter=U'
+  alias game='git commit --amend --no-edit'
+
   alias s="/mnt/c/sudo/Sublime\ Text\ 3/subl.exe"
   # triage music in Google Music:
   alias googlemusic="find '/mnt/d/Music/挑歌/可在Google Music挑/' -name *.mp3 | shuf -n 30 | xargs -d '\n' -i mv {} '/mnt/d/Music/挑歌/In Google Music Now'"
