@@ -51,7 +51,7 @@ PS1="\n${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w $color
 
   alias s="/mnt/c/sudo/Sublime\ Text\ 3/subl.exe"
   # triage music in Google Music:
-  alias googlemusic="find '/mnt/d/Music/挑歌/可在Google Music挑/' -name *.mp3 | shuf -n 30 | xargs -d '\n' -i mv {} '/mnt/d/Music/挑歌/In Google Music Now'"
+  alias googlemusic="find '/mnt/d/Archive/Music Triage/可在Google Music挑/' -name *.mp3 | shuf -n 30 | xargs -d '\n' -i mv {} '/mnt/d/Music/Archive/Music Triage/In Google Music Now'"
     # explain:
     # -name: what to find; shuf: shuffle; -d '\n': only \n is treated as delimiter, so each line is passed into xargs; {}: not sure
   # youtube-dl aliases:
