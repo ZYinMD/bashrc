@@ -33,7 +33,7 @@ color35="\[\033[35m\]"
 color36="\[\033[36m\]"
 color37="\[\033[37m\]"
 nocolor="\[\033[0m\]"
-PS1="\n${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w $color36\$(parse_git_branch)$nocolor\n$ "
+PS1="\n${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w $color36\$(parse_git_branch)\n$color36$ $nocolor"
 
 
 # custom aliases:
