@@ -63,8 +63,8 @@ PS1="\n${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w $color
 # below are something I learned from Lynda course "Unix for Mac OS X Users"
 export HISTSIZE=10000   # increase maximum history size
 export HISTFILESIZE=1000000 # increase maximum history file size
-export HISTTIMEFORMAT='%Y-%m-%d %a %H:%M '  # add date and time to history, this is called strftime format
-export HISTIGNORE="his:history:history *:pwd:df:ls:ls -la:ll:dir:gsta:glog:graph:gadd:game:usong *:u *:" # these commands won't be logged
+# export HISTTIMEFORMAT='%Y-%m-%d %a %H:%M '  # add date and time to history, this is called strftime format
+export HISTIGNORE="his:history:history *:pwd:df:ls:ls -la:ll:dir:gsta:glog:graph:gadd:game:usong *:u *:*:cd *:exit" # these commands won't be logged, delimeted by colon
 export HISTCONTROL=ignoreboth
   # this should be the same as HISTCONTROL=ignoredups:ignorespace
   # ignoredups means if you used a command multiple times in a row, only log once
