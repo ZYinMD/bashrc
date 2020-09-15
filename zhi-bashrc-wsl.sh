@@ -22,7 +22,7 @@
 
 # custom command prompt:
 parse_git_branch() { # get git branch name
- git branch 2> /dev/null | sed -e '/^[^*]/d ' -e 's/* \(.*\)/(\1) /'
+    git branch 2>/dev/null | sed -e '/^[^*]/d ' -e 's/* \(.*\)/(\1) /'
 }
 
 color31="\[\033[31m\]"
@@ -35,37 +35,37 @@ color37="\[\033[37m\]"
 nocolor="\[\033[0m\]"
 PS1="\n${debian_chroot:+($debian_chroot)}$color34\u $color35\H $color33\w $color36\$(parse_git_branch)\n$color36$ $nocolor"
 
-
 # custom aliases:
-  alias his='history'
-  alias dir='ls --color --group-directories-first --file-type -hlX'
-  alias gsta='git status'
-  alias gadd='git add -A'
-  alias gcom='git commit -m'
-  alias gche='git checkout'
-  alias glog='git log --oneline --decorate'
-  alias graph='git log --all --decorate --oneline --graph'
-  alias gdiff='git diff'
-  alias gconf='git diff --name-only --diff-filter=U'
-  alias game='git commit --amend --no-edit'
+alias his='history'
+alias dir='ls --color --group-directories-first --file-type -hlX'
+alias gsta='git status'
+alias gadd='git add -A'
+alias gcom='git commit -m'
+alias gche='git checkout'
+alias glog='git log --oneline --decorate'
+alias graph='git log --all --decorate --oneline --graph'
+alias gdiff='git diff'
+alias gconf='git diff --name-only --diff-filter=U'
+alias game='git commit --amend --no-edit'
 
-  alias s="/mnt/c/sudo/Sublime\ Text\ 3/subl.exe"
-  # triage music in Google Music:
-  alias googlemusic="find '/mnt/d/OneDrive/Music Triage/可在Google Music挑/' -name *.mp3 | shuf -n 30 | xargs -d '\n' -i mv {} '/mnt/d/OneDrive/Music Triage/In Google Music Now/'"
-    # explain:
-    # -name: what to find; shuf: shuffle; -d '\n': only \n is treated as delimiter, so each line is passed into xargs; {}: not sure
-  # youtube-dl aliases:
-  . ~/projects/youtube-dl-configs/settings.sh
+alias s="/mnt/c/sudo/Sublime\ Text\ 3/subl.exe"
+
+# triage music in Google Music:
+alias googlemusic="find '/mnt/d/OneDrive/Music Triage/可在Google Music挑/' -name *.mp3 | shuf -n 30 | xargs -d '\n' -i mv {} '/mnt/d/OneDrive/Music Triage/In Google Music Now/'"
+# explain -name: what to find; shuf: shuffle; -d '\n': only \n is treated as delimiter, so each line is passed into xargs; {}: not sure
+
+# youtube-dl aliases:
+. ~/projects/youtube-dl-configs/settings.sh
 
 # goto my preferred dir:
-  cd ~/projects
+cd ~/projects
 
 # below are something I learned from Lynda course "Unix for Mac OS X Users"
-export HISTSIZE=10000   # increase maximum history size
+export HISTSIZE=10000       # increase maximum history size
 export HISTFILESIZE=1000000 # increase maximum history file size
 # export HISTTIMEFORMAT='%Y-%m-%d %a %H:%M '  # add date and time to history, this is called strftime format
 export HISTIGNORE="his:history:pwd:df:ls:ls -la:ll:dir:gsta:glog:graph:gadd:game:usong *:u *:cd *:exit:" # these commands won't be logged, delimeted by colon
 export HISTCONTROL=ignoreboth
-  # this should be the same as HISTCONTROL=ignoredups:ignorespace
-  # ignoredups means if you used a command multiple times in a row, only log once
-  # ignorespace means if you add a space before you command, it won't be logged. Useful when inputing sensitive stuff like passwords
+# this should be the same as HISTCONTROL=ignoredups:ignorespace
+# ignoredups means if you used a command multiple times in a row, only log once
+# ignorespace means if you add a space before you command, it won't be logged. Useful when inputing sensitive stuff like passwords
