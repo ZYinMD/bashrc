@@ -25,6 +25,8 @@ alias graph='git log --all --decorate --oneline --graph'
 alias gdiff='git diff'
 alias gconf='git diff --name-only --diff-filter=U'
 alias game='git commit --amend --no-edit'
+alias node10='nvm use 10.22.1'
+alias node14='nvm use 14.13.0'
 
 # PS1:
 PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
@@ -51,3 +53,8 @@ PS1="$PS1"'\n'             # new line
 PS1="$PS1"'\[\033[1;32m\]' # change to light blue
 PS1="$PS1"'❖ '             # prompt: always >
 PS1="$PS1"'\[\033[0m\]'    # no color
+
+# youtube-dl
+
+source ~/Dropbox/Coding/youtube-dl-configs/settings.sh
+cd ~/Dropbox/Coding || exit
