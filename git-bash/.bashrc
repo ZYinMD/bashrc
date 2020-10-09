@@ -55,6 +55,10 @@ PS1="$PS1"'❖ '             # prompt: always >
 PS1="$PS1"'\[\033[0m\]'    # no color
 
 # youtube-dl
-
 source ~/Dropbox/Coding/youtube-dl-configs/settings.sh
+
+# music
+source ~/Dropbox/Coding/play/features/music/move-random-songs-to-listen-on-phone.sh
+
+# start dir
 cd ~/Dropbox/Coding || exit
