@@ -4,8 +4,10 @@
 # This file should contain personal settings for interactive shells: alias, PS1, etc.
 
 # history:
-export HISTSIZE=10000                                                                                             # increase maximum history (in bytes)
-export HISTIGNORE="his:history:history *:pwd:df:ls:ls -la:ll:dir:gsta:glog:graph:gadd:game:usong *:u *:cd *:exit" # these commands won't be logged to history (delimet by colon).
+# sync history between tabs:
+export PROMPT_COMMAND='history -a;history -c;history -r'                                                             # see https://superuser.com/questions/555310/bash-save-history-without-exit for explanation
+export HISTSIZE=10000                                                                                                # increase maximum history (in bytes)
+export HISTIGNORE="his:history:history *:pwd:df:ls:ls -la:ll:dir:gsta:glog:graph:gadd:game:usong *:u *:cd:cd *:exit" # these commands won't be logged to history (delimet by colon).
 export HISTCONTROL=ignoreboth
 # this should be the same as HISTCONTROL=ignoredups:ignorespace
 # ignoredups means if you used a command multiple times in a row, only log once
@@ -26,6 +28,7 @@ alias gdiff='git diff'
 alias gconf='git diff --name-only --diff-filter=U'
 alias game='git commit --amend --no-edit'
 alias node10='nvm use 10.22.1'
+alias node12='nvm use 12.19.0'
 alias node14='nvm use 14.13.0'
 
 # PS1:
